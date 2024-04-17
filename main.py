@@ -85,7 +85,7 @@ def build():
 <!DOCTYPE html>
 <html>
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="mobile-web-app-capable" content="yes">
   <head>
     <title>Recipes</title>

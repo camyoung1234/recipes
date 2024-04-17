@@ -39,7 +39,7 @@ body {
 	"ingredients instructions";
     grid-gap: 16px;
     page-break-before: always;
-    scroll-snap-align: start;
+    scroll-snap-align: start end;
 }
 
 @media only screen and (orientation: portrait) {
