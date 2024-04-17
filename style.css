@@ -30,7 +30,7 @@ body {
 
 .recipe {
     align-content: flex-start;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding: 16px;
     /*padding-bottom: 0;*/
     display: grid;
@@ -42,10 +42,24 @@ body {
     scroll-snap-align: start;
 }
 
+@media (orientation: portrait) {
+  .recipe {
+    grid-template-areas:
+        "title"
+	"ingredients"
+        "instructions";
+    grid-template-columns: auto;
+  }
+}
+
 @media only screen {
     .recipe {
-        height: calc(100vh - 32px);
-        grid-template-columns: 384px auto;
+        min-height: calc(100vh - 32px);
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .recipe {
     }
 }
 
