@@ -42,7 +42,7 @@ body {
     scroll-snap-align: start;
 }
 
-@media (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .recipe {
     grid-template-areas:
         "title"
@@ -60,10 +60,15 @@ body {
 
 @media only screen and (orientation: landscape) {
     .recipe {
+        grid-template-columns: 384px auto;
     }
 }
 
 @media only print {
+    body {
+        color: black;
+    }
+
     .recipe {
         grid-template-columns: 288px auto;
     }
