@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+  color-scheme: light dark;
+}
+
 html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -8,6 +12,20 @@ html {
 body {
     font-family: 'Open Sans';
     margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+	background: white;
+	color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+	background: black;
+	color: white;
+    }
 }
 
 .recipe {

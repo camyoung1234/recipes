@@ -28,7 +28,7 @@ def scrape():
             print(f'failed to scrape {url}')
             continue
         try:
-            print(recipe['image'])
+            #print(recipe['image'])
             image_ext = os.path.splitext(recipe['image'])[1]
             with open(f'tmp{image_ext}', 'wb') as f:
                 f.write(requests.get(recipe['image']).content)
