@@ -1,6 +1,7 @@
 import colorsys
 import html
 import json
+import os
 import shutil
 
 def load_recipes():
@@ -75,6 +76,7 @@ def build():
     index_html = f'''\
 <!DOCTYPE html>
 <html>
+  <meta name="robots" content="noindex, nofollow" />
   <head>
     <title>Recipes</title>
     <style type="text/css">
