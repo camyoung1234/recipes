@@ -5,6 +5,8 @@ from recipe_scrapers import scrape_me
 import requests
 from tqdm import tqdm
 import datetime
+from convert_recipes import to_markdown, slugify
+from combine_recipes import combine
 
 def scrape():
     try:
@@ -41,6 +43,16 @@ def scrape():
         recipes[url] = recipe
     with open('recipes.json', 'w') as f:
         json.dump(recipes, f)
+
+    os.makedirs('markdown', exist_ok=True)
+    for url, recipe in recipes.items():
+        title = recipe.get('title', 'Untitled')
+        filename = slugify(title) + '.md'
+        filepath = os.path.join('markdown', filename)
+        with open(filepath, 'w') as f:
+            f.write(to_markdown(recipe))
+
+    combine()
 
 if __name__ == '__main__':
     scrape()
