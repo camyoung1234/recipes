@@ -3,6 +3,7 @@ import html
 import json
 import os
 import shutil
+from combine_recipes import combine
 
 def load_recipes():
     try:
@@ -100,6 +101,8 @@ def build():
 '''
     with open('dist/index.html', 'w') as f:
         f.write(index_html)
+
+    combine()
     #return
 
     #with open('dist/index.html', 'w') as index_html:

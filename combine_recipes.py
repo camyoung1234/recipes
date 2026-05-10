@@ -13,9 +13,10 @@ def combine():
         with open(os.path.join(markdown_dir, filename), 'r') as f:
             all_markdown.append(f.read())
 
-    with open('recipes.md', 'w') as f:
+    os.makedirs('dist', exist_ok=True)
+    with open('dist/recipes.md', 'w') as f:
         f.write('\n\n---\n\n'.join(all_markdown))
-    print("Generated recipes.md")
+    print("Generated dist/recipes.md")
 
 if __name__ == '__main__':
     combine()
