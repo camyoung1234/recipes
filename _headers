@@ -1,2 +1,4 @@
-https://:recipes-6ht.pages.dev/*
-  X-Robots-Tag: noindex
+#https://recipes-6ht.pages.dev/*
+#  X-Robots-Tag: noindex
+/recipes.md
+  Content-Type: text/plain
